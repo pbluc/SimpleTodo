@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "794893673617",
+    "firebase_url": "https://my-does-e2e0b-default-rtdb.firebaseio.com",
+    "project_id": "my-does-e2e0b",
+    "storage_bucket": "my-does-e2e0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794893673617:android:10e07b32ef288b6f700b30",
+        "android_client_info": {
+          "package_name": "com.example.mydoes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794893673617-o9d8k1fdd2kl7l95hnpkstfabt7jdqmu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgfqKz42HI9MBblPqKwpqvvB783EJ9V30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794893673617-o9d8k1fdd2kl7l95hnpkstfabt7jdqmu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
