@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Random;
 
-public class NewTaskActivity extends AppCompatActivity {
+public class NewTodoActivity extends AppCompatActivity {
     TextView titlepage, addtitle, adddesc, adddate;
     EditText titledoes, descdoes, datedoes;
     Button btnSaveTask, btnCancel;
@@ -63,7 +63,7 @@ public class NewTaskActivity extends AppCompatActivity {
 
                         Log.i("patricia", "works");
 
-                        Intent a = new Intent(NewTaskActivity.this, MainActivity.class);
+                        Intent a = new Intent(NewTodoActivity.this, MainActivity.class);
                         startActivity(a);
                     }
 
@@ -78,7 +78,7 @@ public class NewTaskActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent exit = new Intent(NewTaskActivity.this, MainActivity.class);
+                Intent exit = new Intent(NewTodoActivity.this, MainActivity.class);
                 startActivity(exit);
             }
         });

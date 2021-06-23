@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter.MyViewHolder> {
+public class TodosAdapter extends RecyclerView.Adapter<TodosAdapter.MyViewHolder> {
 
     Context context;
-    ArrayList<MyDoes> myDoes;
+    ArrayList<MyTodos> myDoes;
 
-    public DoesAdapter(Context c, ArrayList<MyDoes> p) {
+    public TodosAdapter(Context c, ArrayList<MyTodos> p) {
         context = c;
         myDoes = p;
     }
@@ -42,7 +42,7 @@ public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter.MyViewHolder> 
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent aa = new Intent(context, EditTaskDesk.class); //EditTaskDesk
+                Intent aa = new Intent(context, EditTodoDesk.class); //EditTaskDesk
                 aa.putExtra("titledoes", getTitleDoes);
                 aa.putExtra("descdoes", getDescDoes);
                 aa.putExtra("datedoes", getDateDoes);

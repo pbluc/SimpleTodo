@@ -19,7 +19,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference;
     RecyclerView ourDoes;
-    ArrayList<MyDoes> list;
-    DoesAdapter doesAdapter;
+    ArrayList<MyTodos> list;
+    TodosAdapter todosAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(MainActivity.this, NewTaskActivity.class);
+                Intent a = new Intent(MainActivity.this, NewTodoActivity.class);
                 startActivity(a);
             }
         });
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         // Working with data
         ourDoes = findViewById(R.id.ourDoes);
         ourDoes.setLayoutManager(new LinearLayoutManager(this));
-        list = new ArrayList<MyDoes>();
+        list = new ArrayList<MyTodos>();
 
         // Get data from Firebase
         databaseReference = FirebaseDatabase.getInstance().getReference().child("DoesApp");
@@ -74,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Set code to retrieve data and replace layout
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    MyDoes p = dataSnapshot1.getValue(MyDoes.class);
+                    MyTodos p = dataSnapshot1.getValue(MyTodos.class);
                     list.add(p);
                 }
-                doesAdapter = new DoesAdapter(MainActivity.this, list);
-                ourDoes.setAdapter(doesAdapter);
-                doesAdapter.notifyDataSetChanged();
+                todosAdapter = new TodosAdapter(MainActivity.this, list);
+                ourDoes.setAdapter(todosAdapter);
+                todosAdapter.notifyDataSetChanged();
             }
 
             @Override

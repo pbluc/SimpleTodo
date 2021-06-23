@@ -1,15 +1,15 @@
 package com.example.mydoes;
 
-public class MyDoes {
+public class MyTodos {
     String titledoes;
     String datedoes;
     String descdoes;
     String keydoes;
 
-    public MyDoes() {
+    public MyTodos() {
     }
 
-    public MyDoes(String titledoes, String datedoes, String descdoes, String keydoes) {
+    public MyTodos(String titledoes, String datedoes, String descdoes, String keydoes) {
         this.titledoes = titledoes;
         this.datedoes = datedoes;
         this.descdoes = descdoes;

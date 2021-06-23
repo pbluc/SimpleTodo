@@ -6,7 +6,7 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#F4F4F4"
-    tools:context=".NewTaskActivity">
+    tools:context=".NewTodoActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,7 +19,7 @@
             android:layout_marginTop="20dp"
             android:textSize="26sp"
             android:textColor="#FFF"
-            android:text="Create New Task"
+            android:text="Create New Todo"
             android:textAlignment="center"
             android:layout_marginBottom="28dp"
             android:layout_width="match_parent"

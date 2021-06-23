@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class EditTaskDesk extends AppCompatActivity {
+public class EditTodoDesk extends AppCompatActivity {
 
     EditText titledoes, descdoes, datedoes;
     Button btnSaveUpdate, btnDelete;
@@ -34,7 +34,7 @@ public class EditTaskDesk extends AppCompatActivity {
         descdoes = findViewById(R.id.descdoes);
         datedoes = findViewById(R.id.datedoes);
 
-        btnSaveUpdate = findViewById(R.id.btnSaveUpdate);
+        //btnSaveUpdate = findViewById(R.id.btnSaveUpdate);
         btnDelete = findViewById(R.id.btnDelete);
 
         // Get a value from previous page
@@ -53,7 +53,7 @@ public class EditTaskDesk extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()) {
-                            Intent intent = new Intent(EditTaskDesk.this, MainActivity.class);
+                            Intent intent = new Intent(EditTodoDesk.this, MainActivity.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "Failure!", Toast.LENGTH_SHORT).show();
@@ -64,7 +64,7 @@ public class EditTaskDesk extends AppCompatActivity {
         });
 
         // Make an event for button
-        btnSaveUpdate.setOnClickListener(new View.OnClickListener() {
+        /*btnSaveUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 databaseReference.addValueEventListener(new ValueEventListener() {
@@ -75,7 +75,7 @@ public class EditTaskDesk extends AppCompatActivity {
                         dataSnapshot.getRef().child("datedoes").setValue(datedoes.getText().toString());
                         dataSnapshot.getRef().child("keydoes").setValue(keykeyDoes);
 
-                        Intent a = new Intent(EditTaskDesk.this, MainActivity.class);
+                        Intent a = new Intent(EditTodoDesk.this, MainActivity.class);
                         startActivity(a);
                     }
 
@@ -85,6 +85,6 @@ public class EditTaskDesk extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
     }
 }
