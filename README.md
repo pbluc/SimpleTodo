@@ -28,6 +28,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/pbluc/SimpleTodo/raw/master/simple_todo_readme_gif.gif' title='Video Walkthrough' width='auto' height='600' alt='Video Walkthrough' />
 
+GIF created with [Kap](https://getkap.co/).
+
 ## Notes
 
 The biggest struggle was in getting the Firebase, realtime database to properly remove and even possibly update existing todos. This was difficult to debug and fix for because the issue wasn't inherently with the code base from Android Studio but the backend of Firebase itself.
